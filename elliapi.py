@@ -11,7 +11,7 @@ def get_random_gif(request=Request):
     domain= "localhost:8000"
     if 'MY_DOMAIN' in environ:
         domain=environ['MY_DOMAIN']
-    return {"id": id,"url":f'http://{domain}/api/gif/{id}'}
+    return {"id": id,"url":f'https://{domain}/api/gif/{id}'}
 
 @app.get("/api/gif/{id}")
 def get_gif(id:int):
